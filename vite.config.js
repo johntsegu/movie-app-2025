@@ -1,20 +1,7 @@
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react-swc'  // use SWC for faster builds
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'  // use SWC for faster builds
 
-// export default defineConfig({
-//   plugins: [react()],
-//   base: "/movie-app-2025/"  // ✅ correct location for GitHub Pages
-// })
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler', { target: '18' }]],
-      },
-    }),
-  ],
-});
+  plugins: [react()],
+  base: "/movie-app-2025/"  // ✅ correct location for GitHub Pages
+})
